@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails project management website.
 
-Things you may want to cover:
+Built with <b><i>Ruby on Rails</i></b>, with a little help from my friend Bootstrap.  Database handled with <b><i>Postgresql</i></b>, rather than <i>SQLite3.</i>
 
-* Ruby version
+Current pages include <tt>contact</tt>, <tt>about</tt> and <tt>home</tt>.
 
-* System dependencies
+Database integration coming soon...
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Kelsey
