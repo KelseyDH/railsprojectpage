@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projectman</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Kelsey Hannan's Page</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/about_us">About</a></li>
+                <li><a href="/contactme">Contact Me</a></li>
+                <li class="dropdown">
+                  <a href="/" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about_us">About</a></li>
+                    <li><a href="/contactme">Contact Me</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Projects</li>
+                    <li><a href="/">PM Tool</a></li>
+                    <li><a href="/">Google Map API</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<!-- <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">Kelsey's App</a>
+      <ul class="nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/about_us">About</a></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li><a href="/sign_in">Sign In</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+<!-- <!-- 
+  <div class="navbar navbar-fixed-top">
+   
+    <%= link_to "Home", root_path, style: "float: left;" %>
+    <%= link_to "About Us", about_us_path, id: "abc", style: "float: left;" %>
+
+  </div> -->
+ -->
+  <div class="container">
+   
+    <%= yield %>
+
+
+  </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/docs.min.js"></script>
+
+</body>
+</html>
