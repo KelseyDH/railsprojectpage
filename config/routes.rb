@@ -6,8 +6,10 @@ Projectman::Application.routes.draw do
 
   get "/test" => "test#index"
   resources :home 
-  resources :projects
-
+ 
+  resources :projects do
+    resources :tasks
+  end
 
   root "home#index"
 

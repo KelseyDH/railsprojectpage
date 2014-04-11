@@ -1,0 +1,268 @@
+exit
+q
+q.title
+q = Question.new
+q.title
+q.persisted?
+q.save
+q
+q.title = "hello world"
+q
+q.save
+q.new
+q.title = "not hello world"
+q
+q.save
+q2 = Question.new
+Question.all
+Questions.all
+Question.create(title: "watch the world burn", description: "daaaaaaamn")
+q = Question.new(title:"blaaaaaaaah", body: "hel")
+q = Question.new(title:"blaaaaaaaah", description: "hel")
+reload!
+q = Question.new
+q.save
+q.errors
+reload!
+q.errors
+q = Question.new(title: "abc")
+q2 = Question.new(title: "abc")
+q.save
+q2.save
+Reload!
+reload!
+q.error
+q.save
+q3 = Question.new
+q3 = Question.new
+reload!
+q3 = Question.new
+q3 = Question.new(description: "hello")
+q = Question.find 100
+q = Question.find 100
+q3 = Question.new(description: "hello")
+q.update_attributes(title: "some new title", description: "some new description")
+q.destroy
+Question.find_by_title "abc"
+q = Question.new(title: "abc")
+q4 = Question.new(title: "abc")
+q.save
+q4.save
+q4.update_attributes(title: "cdefg")
+q4.update_attribute(title: "cdefg")
+q4.update_attributes(title: "cdefg")
+q4.save
+reload!
+Hirb.enable
+hirb.enable
+exit
+Question.all
+Question.select(:id, :title, :description).limit(2)
+Question.select(:id, :title, :description)
+q4 = Question.new
+q4 = Question.new(title: "kelsey", description: "I am awesome.")
+q4.save
+Question.list
+Question.all
+Question.select(:id, :title, :description).limit(2).offset(2)
+Question.all
+reload!
+Question.all
+exit
+Question.all
+Question.where(title: "abc")
+Question.where.not(title: "abc")
+Question.where(["title like ?", "%fas%"])
+q8 = Question.new(title: "fasasdbfasdlfjke")
+q8.save
+q8 = Question.new(title: "fasasdbfasdlfjke", description: "I am greaaaat")
+q8.save
+q11 = Question.new(title: "fasasdbfasdlfjke", description: "fasscaaa great")
+q11.save
+q11 = Question.new(title: "sdbfasdlfjke", description: "fasscaaa great")
+q11.save
+Question.where(["title like ?", "%fas%"])
+q12 = Question.new(title: "sdbfasdlfjke", description: "fasscaaa great")
+q12.save
+q12 = Question.new(title: "dbfasdlfjke", description: "fascaaa great")
+q12.save
+Question.where(["title like ?", "%fas%"])
+Question.where(["title like ? OR description like ?", "%fas%"]).where([created_at > ?", 10.days.ago])
+Question.where(["title like ? OR description like ?", "%fas%", "%fas%"]).where(["created_at > ?", 10.days.ago])
+exit
+Question.recent(10)
+exit
+exit
+q15 = Question.new(title: "hello", description: "world")
+q15 = Question.new(title: "hello", description: "world")
+q15 = Question.new(title: "hello", description: "world")
+reload!
+q15 = Question.new(title: "hello", description: "world")
+q15 = Question.new(title: "hello", description: "world")
+exit
+q15 = Question.new(title: "helloooo", description: "worldd")
+exit
+q15 = Question.new(title: "helloooo", description: "worldd")
+q15 = Question.new(title: "helloooo", description: "worldd")
+reload!
+q15 = Question.new(title: "helloooo", description: "worldd")
+exit
+q15 = Question.new(title: "helloooo", description: "worldd")
+q15.save
+q15.update_attributes(title: "some new title", description: "some new description")
+q = Question.find 100
+Question.all
+reload!
+Question.all
+q21 = Question.new(title: "master chief", description: "alien slayer")
+q21.save
+reload!
+Question.all
+Question.all
+Question.all
+reload!
+Question.all
+reload!
+Question.all
+exit
+Question.all
+exit
+Question.all
+reload!
+Question.all
+exit
+Question.all
+reload!
+Question.all
+exit
+Question.all
+q22 = Question.new(title: "halo troll", description: "halo sucks")
+q22.save
+Question.all
+Question.recent_ten
+Question.recent(3)
+Question.scope
+Question.default_order
+Question.order
+Question.all
+doskey /history | clip
+doskey /history | clip
+exit
+hiringtest.rb
+hiringtest.rb
+hiringtest.rb
+exit
+exit
+q = Question.save
+q = Question.save(" ")
+exit
+q3 = Question.save
+q3 = Question.new
+q.errors
+exit
+Post.new("hello","hii!")
+steve = Post.new("hello","hii!")
+@post = Post.new("hello","hii!")
+exit
+answer
+Answer
+exit
+question.answers
+answer = question.answers.new
+question.answers << answer1
+exit
+exit
+question = Question.last
+question.answers
+answer1 = Answer.new
+answer1.body
+answer1.body = "hello"
+question.answers << answer1
+question.answers.where(body: "hello")
+q26 = Answer.new
+q24.body("hello")
+q24.body = "hello"
+answer2 = Answer.new
+answer2.body = "this is the text body"
+question.answers >> answer2
+answer2.body
+answer2.body = "this is the text body"
+question.answers << answer2
+q55 = Answer.new
+q55.body = "body test is here"
+question.answers << q55
+exit
+Question.first
+exit
+@question = Question.last
+@question.answers.ordered_by_creation
+exit
+Question.update_all(user_id: 1)
+Question.update_all(user_id: 1)
+Quest
+Question.all
+rails g migration add_user_references_to_questions user:references
+rails g migration add_user_references_to_question user:references
+exit
+["Art", "Science", "Technology", "Sports", "Travel", "Humor"].each { |x| Category.create(title: x)}
+["Art", "Science", "Technology", "Sports", "Travel", "Humor"].each { |x| Category.create(name: x)}
+Category.create(name: "Politics")
+c1 = Category.first
+c2 = Category.find 4
+q = Question.first
+q.categories << c1
+q.categories << c1
+q.categories << c1
+q = Question.all.sample
+c1 = Category.find 1
+c2 = Category find 2
+c2 = Category.find 2
+q.categories << c2
+q.categories
+Categorization.all
+category = Category.find 1
+category.questions
+question.categories
+Question.update_all(user_id: 1)
+exit
+Question.all
+Question.all.destroy
+Question.destroy.all
+User.all
+Question.update_all(user_id: 3)
+Category.all.map(&title)
+Category.all.map(&:title)
+Category.all
+Category.all.map(&:name)
+q = Question.first
+c1 = Category.first
+c1 = Category.find 2
+q.categories << c1
+q.categories
+Categorization.all
+exit
+exit
+q = Question.first
+c1 = Category.first
+q.categories << c1
+q2 = Question.find 2
+c1 = Category.first
+c1 = Category.find 2
+q.categories << c1
+q.categories << c2
+q.categories
+Categorization.all
+exit
+p = Project.new(title: "Student Orientation", description: "A portal for helping douglas students", due_date: "2014-04-15")
+Project.all
+Project.all
+Project.due_date
+c =Project.find(1)
+c.due_date
+c.due_date("2014-04-11")
+exit
+Task.new(title: "hello")
+rails g resources tasks projects:references
+rails g tasks projects:references
+rails g resource tasks project:references
+exit
