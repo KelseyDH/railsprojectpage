@@ -1,10 +1,17 @@
 class TasksController < ApplicationController
 
+before_action :find_project
+
+  def new
+  
+    @task = @project.task.new
+  end
+
 
   def create
     @task = @project.task.new(task_attributes)
     if @task.save
-      redirect_to @task , notice: "Task added successfully!"
+      redirect_to @project, notice: "Task added successfully!"
     else
       render projects_path(@project.id)
     end
@@ -18,6 +25,8 @@ class TasksController < ApplicationController
       redirect_to @project, alert: "Unable to delete task."
     end
   end
+
+
 
   private
 

@@ -7,6 +7,9 @@ class Project < ActiveRecord::Base
 
   before_save :capitalize_title
 
+  has_many :tasks, dependent: :destroy
+
+
   private
 
   def capitalize_title
