@@ -11,6 +11,20 @@ gem 'quiet_assets'
 
 gem "bootstrap-sass", '~> 3.1.1'
 
+gem 'bourbon'
+
+gem 'haml'
+
+gem 'html2haml'
+
+group :development do
+  gem "hirb"
+  gem "interactive_editor"
+  gem "awesome_print"
+  # gem 'better_errors' #debugging gem
+  # gem 'binding_of_caller' #debugging gem
+
+end
 
 ##ASK ABOUT:  DOES this reference the 
 #database development?!

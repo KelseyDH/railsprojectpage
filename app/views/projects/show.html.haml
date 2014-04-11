@@ -1,0 +1,13 @@
+
+
+.container
+  .well
+    = link_to "Back to Projects", projects_path
+    %h3.title= @project.title
+    %p= @project.description
+    %p= @project.created_at
+
+    = button_to "Edit", edit_project_path(@project), method: :get, class: "btn btn-primary"
+    %br/
+    = button_to "Delete", @project, method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this project?"}
+    %br/

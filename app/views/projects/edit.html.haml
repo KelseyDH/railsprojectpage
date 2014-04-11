@@ -1,0 +1,5 @@
+.container
+  .well
+    %h2 Edit Project
+    = render "form", button_label: "Update Project"
+    = button_to "Cancel", project_path(@project.id), method: :get, class: "btn btn-danger"

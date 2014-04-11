@@ -1,0 +1,23 @@
+%h1 Welcome to our project manager!
+
+.col-sm-12.col-md-12.col-lg-12.border-bold
+  = link_to "Create New Project", new_project_path, class: "btn btn-success"
+
+  %h3.title Current Projects
+
+  %table.table.table-striped.table-hover
+
+    %tr
+      %th Title
+      %th Description
+      %th Day Created
+      %th Due Date
+    - @projects.each do |project|
+      %tr
+        %td 
+          %h5= link_to project.title, project_path(project)
+        %td.description= project.description
+        %td #{formatted_date(project.created_at)}
+        %td #{project.due_date}
+
+

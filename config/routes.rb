@@ -4,7 +4,10 @@ Projectman::Application.routes.draw do
 
   get "/contactme" => "home#contactme"
 
-resources :home 
+  get "/test" => "test#index"
+  resources :home 
+  resources :projects
+
 
   root "home#index"
 

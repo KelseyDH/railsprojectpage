@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %title Projectman
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .navbar-wrapper
+      .container
+        .navbar.navbar-default.navbar-static-top{role: "navigation"}
+          .container
+            .navbar-header
+              %a.navbar-brand{href: "/"} Kelsey Hannan's Page
+            .nav.navbar-nav
+              %li
+                %a{href: "/"} Home
+              %li
+                %a{href: "/projects"} Projects
+              %li
+                %a{href: "/about_us"} About
+              %li
+                %a{href: "/contactme"} Contact Me
+
+    .container
+    
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"}
+    %script{src: "../../dist/js/bootstrap.min.js"}
+    %script{src: "../../assets/js/docs.min.js"}
+
+    - if flash[:notice] 
+      .alert.alert-success= flash[:notice]
+    - elsif flash[:error]
+      .alert.alert-danger= flash[:error]
+    / %h3= flash[:notice] || flash[:error]
+
+    = yield
