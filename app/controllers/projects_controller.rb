@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   before_action :find_project,
-                only: [:edit, :destroy, :update]
+                only: [:edit, :show, :destroy, :update]
 
 
   def index
@@ -41,7 +41,21 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @task = Task.new
+
+    @tasks = @project.tasks.ordered_by_creation
   end
+
+  #  def show
+  #    @project = Project.find(params[:project_id] || params[:id])
+  #   @task = Task.new
+  #   #NOTE HIGH number of instance variables above(convention is 2 per method)
+  #   #this means we should refactor soon
+  #   @tasks = @question.tasks.ordered_by_creation
+  #   #Note that @answers is being used by show.html.haml to render data, which is then used to identify
+  #   #partial page _answer.html.haml
+  #   #NEEDS FIXING: @vote = current_user.vote_for(@question) || Vote.new
+  # end
 
   def update
     if @project.update_attributes(project_attributes)
@@ -61,7 +75,8 @@ class ProjectsController < ApplicationController
 private
 
   def find_project
-  @project = Project.find params[:id]  
+  # @project = Project.find params[:id]  
+  @project = Project.find(params[:project_id] || params[:id])
   end
 
   ##Method to define what's needed to create a new project

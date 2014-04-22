@@ -1,0 +1,8 @@
+.well{id: dom_id(task)}
+  .row
+    .col-sm-8.col-md.8.col-xs-8
+      %p= task.title
+      %p Due Date: 
+      %p= task.due_date
+    .col-sm-8.col-md.8.col-xs-8
+      .pull-right= button_to "Delete", project_task_path(@project, task), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this task?"}, remote: true, class: "btn btn-danger"

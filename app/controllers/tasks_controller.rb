@@ -2,14 +2,13 @@ class TasksController < ApplicationController
 
 before_action :find_project
 
-  def new
-  
-    @task = @project.task.new
-  end
+
+
 
 
   def create
-    @task = @project.task.new(task_attributes)
+    @project = Project.find(params[:project_id])
+    @task = @project.tasks.new(task_attributes)
     if @task.save
       redirect_to @project, notice: "Task added successfully!"
     else
@@ -31,11 +30,11 @@ before_action :find_project
   private
 
   def task_attributes
-    params.require(:task).permit([:title])
+    params.require(:task).permit([:title, :due_date])
   end
 
   def find_project
-    @project = Project.find params([:project_id])
+    @project = Project.find params[:project_id]
   end
 
 end

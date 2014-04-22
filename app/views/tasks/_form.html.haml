@@ -1,0 +1,14 @@
+/ %h2 Add A Task
+/ - if @task.errors.any?
+/   %ul
+/     - @task.errors.full_messages.each do |message|
+/       %li= message
+
+%h2 Add Task
+= form_for @task, url: project_tasks_path(@project) do |f|
+  = f.label :title, "Task:"
+  = f.text_field :title
+  .pad10
+  = f.label :due_date, "Due Date:"
+  = f.datetime_select :due_date
+  = f.submit "Submit task", class: "btn btn-primary"

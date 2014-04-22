@@ -9,7 +9,16 @@ gem 'pg'
 
 gem 'quiet_assets'
 
-gem "bootstrap-sass", '~> 3.1.1'
+gem 'thin'
+
+# gem "bootstrap-sass", '~> 3.1.1'
+
+
+# # twitter bootstrap css & javascript toolkit
+# gem 'twitter-bootswatch-rails', '~> 3.1.1'
+
+# # twitter bootstrap helpers gem, e.g., alerts etc...
+# gem 'twitter-bootswatch-rails-helpers'
 
 gem 'bourbon'
 
@@ -17,25 +26,24 @@ gem 'haml'
 
 gem 'html2haml'
 
+gem 'haml-rails'
+
+
+# group :development do
+#   gem 'libv8', '~> 3.16.14.1'
+#   gem 'therubyracer', :platform => :ruby
+# end
+
+##ASK ABOUT:  DOES this reference the 
+#database development?!
 group :development do
   gem "hirb"
   gem "interactive_editor"
   gem "awesome_print"
-  # gem 'better_errors' #debugging gem
-  # gem 'binding_of_caller' #debugging gem
-
 end
 
-##ASK ABOUT:  DOES this reference the 
-#database development?!
-# group :development do
-#   gem "hirb"
-#   gem "interactive_editor"
-#   gem "awesome_print"
-# end
-
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+# gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

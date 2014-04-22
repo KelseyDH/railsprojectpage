@@ -11,23 +11,25 @@
     %br/
     = button_to "Delete", @project, method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this project?"}
     %br/
-    = link_to "New Task", new_project_task_path, class: "btn btn-success"
+    .container
+      .well= render "tasks/form"
+      =# button_to "New Task", project_tasks_path(@project), method: :get, class: "btn btn-success"
 
     %h3.title Outstanding Tasks
 
-    / %table.table.table-striped.table-hover
+    = render @tasks
 
+    / %table.table.table-striped.table-hover
     /   %tr
     /     %th Title
     /     %th Description
     /     %th Day Created
     /     %th Due Date
-    /   - @tasks.each do |task|
-    /     %tr
-    /       %td 
-    /         %h5= link_to task.title, task_path(task)
-    /       %td.description= task.description
-    /       %td #{formatted_date(task.created_at)}
-    /       %td #{task.due_date}
+    /     -# @tasks.each do |task|
+    /       %tr
+    /         %td 
+    /           %h5= link_to task.title, task_path(task)
+    /         %td #{formatted_date(task.created_at)}
+    /         %td #{task.due_date}
 
 
